@@ -15,7 +15,8 @@ data
 for player in data:
     if player['YahooName'].lower() == enter.lower():
         print(player['YahooName'], player['PlayerID'])
-    
+    else: (print('Error...Player not found!'))
+    break
     
 
     
