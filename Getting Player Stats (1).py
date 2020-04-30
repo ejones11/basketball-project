@@ -5,7 +5,7 @@
 
 
 import requests
-enter=input("Enter a player")
+enter=input("Enter a player" )
 key='a135d562f81946ae8aa641cb331294a0'
 url='https://api.sportsdata.io/v3/nba/scores/json/Players'
 params={'key':key}
@@ -15,8 +15,7 @@ data
 for player in data:
     if player['YahooName'].lower() == enter.lower():
         print(player['YahooName'], player['PlayerID'])
-    else: (print('Error...Player not found!'))
-    break
+   
     
 
     
@@ -36,7 +35,7 @@ for player in data:
 
 import requests
 import pandas as pd
-playerid= input("Enter player id")
+playerid= input("Enter player id" )
 key='a135d562f81946ae8aa641cb331294a0'
 
 url=f'https://api.sportsdata.io/v3/nba/stats/json/PlayerSeasonStatsByPlayer/2019/{playerid}'
