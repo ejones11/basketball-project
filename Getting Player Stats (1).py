@@ -7,6 +7,7 @@
 import requests
 enter=input("Enter a player" )
 key='a135d562f81946ae8aa641cb331294a0'
+THIS IS THE NEW API 'ed8594eb244145cdbc24f75b1da1e48b'
 url='https://api.sportsdata.io/v3/nba/scores/json/Players'
 params={'key':key}
 response= requests.get(url,params)
