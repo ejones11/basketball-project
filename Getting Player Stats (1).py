@@ -6,8 +6,7 @@
 
 import requests
 enter=input("Enter a player" )
-key='a135d562f81946ae8aa641cb331294a0'
-THIS IS THE NEW API 'ed8594eb244145cdbc24f75b1da1e48b'
+key='ed8594eb244145cdbc24f75b1da1e48b'
 url='https://api.sportsdata.io/v3/nba/scores/json/Players'
 params={'key':key}
 response= requests.get(url,params)
@@ -37,7 +36,7 @@ for player in data:
 import requests
 import pandas as pd
 playerid= input("Enter player id" )
-key='a135d562f81946ae8aa641cb331294a0'
+key='ed8594eb244145cdbc24f75b1da1e48b'
 
 url=f'https://api.sportsdata.io/v3/nba/stats/json/PlayerSeasonStatsByPlayer/2019/{playerid}'
 param={'key':key}
@@ -46,6 +45,35 @@ data=response.json()
 data
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+My Code...
+import requests
+import panda as pd
+url = 'https://api.sportsdata.io/v3/nba/scores/json/Players?key=ed8594eb244145cdbc24f75b1da1e48b'
+param={'key':key}
+response=requests.get(url, params=param)
+data=response.json()
+data
+
+
+info = []
+info.append({'first name':data['FirstName']})
+info_data = pd.DataFrame(info)
+info_data
+
+for i in data:
+    print(i)
 
 
 # In[28]:
