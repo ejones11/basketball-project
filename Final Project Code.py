@@ -6,7 +6,7 @@
 
 
 
-
+key='a135d562f81946ae8aa641cb331294a0'
 def get_playerid(enter):
     url='https://api.sportsdata.io/v3/nba/scores/json/Players'
     params={'key':key}
