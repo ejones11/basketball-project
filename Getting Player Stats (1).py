@@ -58,23 +58,16 @@ data
 
 
 My Code...
+import pandas as pd
 import requests
-import panda as pd
 url = 'https://api.sportsdata.io/v3/nba/scores/json/Players?key=ed8594eb244145cdbc24f75b1da1e48b'
-param={'key':key}
-response=requests.get(url, params=param)
-data=response.json()
+
+response = requests.get(url)
+data = response.json()
 data
-
-
-info = []
-info.append({'first name':data['FirstName']})
-info_data = pd.DataFrame(info)
-info_data
-
-for i in data:
-    print(i)
-
+data_df = pd.DataFrame(data)
+info = data_df[ ['FirstName','LastName','Height','Team','Position','Jersey','College','Salary'] ]
+info
 
 
 
