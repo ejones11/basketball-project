@@ -76,17 +76,6 @@ for i in data:
     print(i)
 
 
-# In[28]:
-
-
-stats=[]
-stats.append({'player':data['Name'],'FGA':data['FieldGoalsAttempted'],'FGM':data['FieldGoalsMade'],'FG%':data['FieldGoalsPercentage'], 'EFG%':data['EffectiveFieldGoalsPercentage']})
-stats_data=pd.DataFrame(stats)
-stats_data
-
-
-
-# In[ ]:
 
 
 
