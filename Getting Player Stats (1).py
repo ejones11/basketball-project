@@ -97,6 +97,26 @@ data=response.json()
 
 
 
+import pandas as pd
+import requests
+enter=input("Enter a player")
+key='ed8594eb244145cdbc24f75b1da1e48b'
 
+url='https://api.sportsdata.io/v3/nba/scores/json/Players'
+params={'key':key}
+response= requests.get(url,params)
+data=response.json()
+for player in data:
+    if player['YahooName'].lower() == enter.lower():
+        playerid= player['PlayerID']
+url=f'https://api.sportsdata.io/v3/nba/scores/json/Player/{playerid}'
+params={'key':key}
+response=requests.get(url,params)
+data=response.json()
+data
+info = []
+info.append({'Last Name':data['LastName'],'First Name':data['FirstName'],'Height':data['Height'],'Team':data['Team'],'Position':data['Position'],'Number':data['Jersey'],'College':data['College'],'Salary':data['Salary']})
+info_data=pd.DataFrame(info)
+info_data
 
 
